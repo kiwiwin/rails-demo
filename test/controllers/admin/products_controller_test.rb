@@ -26,10 +26,12 @@ class Admin::ProductsControllerTest < ActionController::TestCase
   #   assert_redirected_to admin_product_path(assigns(:admin_product))
   # end
 
-  # test "should show admin_product" do
-  #   get :show, id: @admin_product
-  #   assert_response :success
-  # end
+  test "should show admin_product" do
+    get :show, id: 1
+    assert_response :success
+
+    assert_select 'section.product', 1
+  end
 
   # test "should get edit" do
   #   get :edit, id: @admin_product
