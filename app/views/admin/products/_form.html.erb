@@ -1,17 +1,12 @@
-<%= form_for(@admin_product) do |f| %>
-  <% if @admin_product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@admin_product.errors.count, "error") %> prohibited this admin_product from being saved:</h2>
-
-      <ul>
-      <% @admin_product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<form action="/admin/products" method="POST">
+  <fieldset name="product">
+    <legend>New Product Information</legend>
+    <label for="product">Name</label>
+    <input type="text" name="name" />
+    </br>
+    <label for="product">Description</label>
+    <input type="text" name="description" />
+    </br>
+    <input type="submit" />
+  </fieldset>
+</form>

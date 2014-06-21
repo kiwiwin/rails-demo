@@ -13,10 +13,14 @@ class Admin::ProductsControllerTest < ActionController::TestCase
     assert_select 'section.product', 2
   end
 
-  # test "should get new" do
-  #   get :new
-  #   assert_response :success
-  # end
+  test "should get new" do
+    get :new
+    assert_response :success
+
+    assert_select 'form fieldset legend', 'New Product Information'
+    assert_select 'form input[name="name"]', 1
+    assert_select 'form input[name="description"]', 1
+  end
 
   # test "should create admin_product" do
   #   assert_difference('Admin::Product.count') do
