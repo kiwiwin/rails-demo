@@ -11,6 +11,7 @@ class Admin::ProductsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:products)
 
     assert_select 'section.product', 2
+    assert_select 'section.product a', 'Add New Price'
   end
 
   test "should get new" do
