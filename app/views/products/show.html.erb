@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 
-<ul>
-	<li><%= @product.name %></li>
-	<li><%= @product.description %></li>
-	<li><%= @product.current_price.price %></li>
-</ul>
+<section class="product">
+	<h3><%= @product.name %></h3>
+	<h4><%= number_to_currency @product.current_price.price %></h4>
+	<p><%= @product.description %></p>
+</section>

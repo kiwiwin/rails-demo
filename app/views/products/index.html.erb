@@ -1,12 +1,14 @@
 <h1>Listing products</h1>
-  <ul>
-    <% @products.each do |product| %>
-      <li>
-        <ul>
-          <li><%= link_to product.name, product.uri %></li>
-          <li><%= product.price.price %></li>
-        </ul>
-      </li>
-    <% end %>
-  </ul>
+
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <section class="product">
+        <h4><%= link_to product.name, product.uri %></h4>
+        <h5><%= number_to_currency product.price.price %></h5>
+      </section>
+    </li>
+  <% end %>
+</ul>
+
 <br>
