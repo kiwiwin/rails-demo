@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "name": "apple juice",
+  "uri": "/products/1",
+  "prices_uri": "/products/1/prices",
+  "current_price": {
+    "uri": "/products/1/prices/current",
+    "price": 120
+  },
+  "description": "good"
+}

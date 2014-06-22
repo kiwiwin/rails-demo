@@ -1,0 +1,93 @@
+[
+	{
+		"request" : {
+			"method" : "get",
+			"uri" : "/products"
+		},
+		"response" : {
+			"status" : "200",
+			"file" : "products.json"
+		}
+	},
+
+	{
+		"request" : {
+			"method" : "post",
+			"uri" : "/products"
+		}, 
+		"response" : {
+			"status" : 201,
+			"headers" : {
+				"location" : "/products/1"
+			}
+		}
+	},
+
+	{
+		"request" : {
+			"method" : "get",
+			"uri" : "/products/1"
+		},
+		"response" : {
+			"file" : "products_1.json"
+		}
+	},
+
+	{
+		"request" : {
+			"method" : "delete",
+			"uri" : "/products/1"
+		},
+		"response" : {
+			"status" : 204
+		}
+	},
+
+	{
+		"request" : {
+			"method" : "get",
+			"uri" : "/products/1/prices"
+		},
+		"response" : {
+			"file" : "products_1_prices.json"
+		}
+	},
+
+	{
+		"request" : {
+			"method" : "post",
+			"uri" : "/products/1/prices"
+		}, 
+		"response" : {
+			"status" : "201",
+			"headers" : {
+				"location" : "/products/1/prices/2"
+			}
+		}
+	},
+
+	{
+		"request" : {
+			"method" : "get",
+			"uri" : "/products/1/prices/2"
+		},
+		"response" : {
+			"file" : "products_1_prices_2.json"
+		}
+	},
+
+	{
+		"request" : {
+			"method" : "get",
+			"uri" : "/products/1/prices/current"
+		},
+		"response" : {
+			"status" : "302",
+			"headers" : {
+				"location" : "/products/1/prices/2"				
+			}
+		}
+	}
+
+
+]

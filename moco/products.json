@@ -1,0 +1,20 @@
+[
+  {
+    "uri": "/products/1",
+    "id": 1,
+    "name": "apple juice",
+    "price": {
+      "uri": "/products/1/prices/current",
+      "price": 120
+    }
+  },
+  {
+    "uri": "/products/2",
+    "id": 2,
+    "name": "banana juice",
+    "price": {
+      "uri": "/products/2/prices/current",
+      "price": 120
+    }
+  }
+]
