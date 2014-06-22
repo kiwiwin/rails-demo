@@ -10,9 +10,10 @@ class ProductsControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil assigns(:products)
 
-    assert_select 'section.product', 2
-    assert_select 'section.product h4', 2
-    assert_select 'section.product h5', 2
+    assert_select 'div.product-item', 2
+    assert_select 'div.product-item img', 2
+    assert_select 'div.product-item strong', 2
+    assert_select 'div.product-item span', 2
   end
 
   # test "should get new" do
@@ -32,9 +33,10 @@ class ProductsControllerTest < ActionController::TestCase
     get :show, id: 1
     assert_response :success
 
-    assert_select 'section.product h3', 1
-    assert_select 'section.product h4', 1
-    assert_select 'section.product p', 1
+    assert_select 'div#product h1', 1
+    assert_select 'div#product img', 1
+    assert_select 'div#product strong', 1
+    assert_select 'div#product span', 1
   end
 
   # test "should get edit" do

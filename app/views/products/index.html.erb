@@ -1,14 +1,16 @@
-<h1>Listing products</h1>
+<div class="adver-bar">
+	<img src="/images/adver-bar.jpg">
+</div>
+<div class="adver-bar">
+	<img src="/images/adver-bar-2.jpg">
+</div>		
 
-<ul>
-  <% @products.each do |product| %>
-    <li>
-      <section class="product">
-        <h4><%= link_to product.name, product.uri %></h4>
-        <h5><%= number_to_currency product.price.price %></h5>
-      </section>
-    </li>
-  <% end %>
-</ul>
-
-<br>
+<div id="products">
+	  <% @products.each do |product| %>
+	    <div class="product-item">
+	      	<img src="/images/book.jpg">
+	        <strong><%= link_to product.name, product.uri %></strong><br>
+	        <span><%= number_to_currency product.price.price %></span>
+	    </div>
+	  <% end %>
+</div>

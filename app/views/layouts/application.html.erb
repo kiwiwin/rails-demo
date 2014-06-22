@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsProduct</title>
+  <title>山寨书店</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="container">
+		<nav class="row">
+			<div id="navbar-logo">	
+				<h1>山寨书店</h1>
+			</div>
+			<div id="navbar-short-links">
+				<a href="/">swhite的山寨书店</a>
+				<a href="/">秒杀</a>
+				<a href="/">礼品卡</a>
+				<a href="/">我要入寨</a>
+				<a href="/">帮助</a>
+			</div>
+		</nav>
+		<div class="row">
+			<div id="header-search" class="col-md-8">
+				<div class="input-group">
+  					<div class="input-group-btn">
+    					<button type="button" class="btn btn-default" tabindex="-1">搜索</button>
+  					</div>
+  					<input type="text" class="form-control">
+				</div>
+			</div>
+			<div id="user-name" class="col-md-2">
+				kiwi小白
+			</div>
+		</div>
+		<div class="row">
+			<div id="product-types" class="col-md-2">
+				<ul>
+					<li>
+						<a href="/">山寨kindle</a>
+					</li>
+					<li>
+						<a href="/">山寨图书</a>
+					</li>
+					<li>
+						<a href="/">山寨音像</a>
+					</li>
+					<li>
+						<a href="/">山寨手机</a>
+					</li>
+					<li>
+						<a href="/">山寨电脑</a>
+					</li>					
+					<li>
+						<a href="/">山寨办公</a>
+					</li>					
+				</ul>
+			</div>
+			<div class="col-md-9">		
+				<%= yield %>
+			</div>
+		</div>
+	</div>
 
-<%= yield %>
+
+
 
 </body>
 </html>
